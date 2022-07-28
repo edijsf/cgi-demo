@@ -1,0 +1,13 @@
+.header {
+  height: 4.75rem;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 3.5rem;
+}
+
+.header-icon {
+  width: 21px;
+  height: 21px;
+}
