@@ -1,0 +1,9 @@
+.categoryheader {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryheader > div {
+  display: flex;
+  flex-direction: row;
+}

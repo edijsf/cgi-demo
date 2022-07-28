@@ -8,33 +8,37 @@ import "./Header.css";
 interface Props {}
 
 const Header = (props: Props) => {
+  console.log(window.location.href);
   return (
     <div className="header">
       <img src={Logo} alt="logo" />
-      <div
+      <a
+        href={`${window.location.href}404`}
         style={{
           marginLeft: "48px",
           paddingTop: "12px",
         }}
       >
         All Products
-      </div>
-      <div
+      </a>
+      <a
+        href={`${window.location.href}404`}
         style={{
           marginLeft: "24px",
           paddingTop: "12px",
         }}
       >
         Trending
-      </div>
-      <div
+      </a>
+      <a
+        href={`${window.location.href}404`}
         style={{
           marginLeft: "24px",
           paddingTop: "12px",
         }}
       >
         Stores
-      </div>
+      </a>
       <div
         style={{
           marginLeft: "auto",
