@@ -134,21 +134,34 @@ public static class DbInitializer
         context.SaveChanges();
         foreach (var c in context.Categories)
         {
-            for (var n = 0; n < 2; n++)
+            for (var n = 0; n < 4; n++)
             {
-                AddCategoryProduct(context, c, $"P[{ProductCounter + 1}] {c.Name}");
+                var newprod = AddCategoryProduct(context, c, $"P[{ProductCounter + 1}] {c.Name}");
+                if (n == 1)
+                {
+                    newprod.Promoted = true;
+                    context.SaveChanges();
+                }
             }
             context.ProductCategories.Add(new ProductCategory() { CategoryId = c.Id, ProductId = p.Id });
             context.SaveChanges();
         }
+        context.Categories.First(x=>x.Name == "Fertilizer").Promoted = true;
+        context.Categories.First(x => x.Name == "Garden watering").Promoted = true;
+        context.Categories.First(x => x.Name == "Sofas").Promoted = true;
+        context.Categories.First(x => x.Name == "Gloxinias").Promoted = true;
+        context.Categories.First(x => x.Name == "Flowers").Promoted = true;
+        
+
+        context.SaveChanges();
     }
-    private static void AddCategoryProduct(DataContext ctx, Category c, string product)
+    private static Product AddCategoryProduct(DataContext ctx, Category c, string product)
     {
         var p = ctx.Products.Add(new Product() { Id = ++ProductCounter, Name = product }).Entity;
         ctx.SaveChanges();
         ctx.ProductCategories.Add(new ProductCategory() { CategoryId = c.Id, ProductId = p.Id });
         ctx.SaveChanges();
-
+        return p;
     }
     private static (Category, List<Category>?) AddCat(DataContext ctx, string cat, string[] sub)
     {
