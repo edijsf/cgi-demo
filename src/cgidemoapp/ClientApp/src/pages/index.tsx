@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryHeader from "../components/Category/CategoryHeader";
+import CategoryTree from "../components/CategoryTree/CategoryTree";
 import Main from "../components/Main/Main";
 import Page from "../components/Page/Page";
 import ProductsList from "../components/Products/ProductsList";
@@ -11,7 +12,9 @@ interface Props {}
 const index = (props: Props) => {
   return (
     <Page>
-      <Sidebar>side</Sidebar>
+      <Sidebar>
+        <CategoryTree />
+      </Sidebar>
       <Main>
         <CategoryHeader />
         <ProductsSort />

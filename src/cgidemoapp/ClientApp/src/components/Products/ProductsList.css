@@ -1,5 +1,8 @@
 .products-list {
-  display: flex;
+  display: grid;
   flex-direction: row;
+  row-gap: 55px;
+  column-gap: 17px;
   flex-wrap: wrap;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }

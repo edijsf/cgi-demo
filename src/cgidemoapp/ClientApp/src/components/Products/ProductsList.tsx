@@ -10,6 +10,12 @@ const ProductsList = (props: Props) => {
       <Product />
       <Product />
       <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const CategoryHeader = (props: Props) => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
         lacus quam, commodo vel arcu vel.
       </h3>
-      <div>
+      <div className="subcategory-preview-wrapper">
         <SubCategoryPreview />
         <SubCategoryPreview />
         <SubCategoryPreview />
