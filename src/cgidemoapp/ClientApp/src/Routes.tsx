@@ -9,7 +9,7 @@ export const Routes: React.FC<IRoutesProps> = () => {
   return (
     <Router>
       <Route path={"/"} element={<Home />} />
-      <Route element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Router>
   );
 };

@@ -2,9 +2,16 @@
   height: 4.75rem;
   width: 100%;
   display: flex;
+  justify-content: center;
   position: sticky;
   top: 0;
   padding: 1.25rem 3.5rem;
+}
+.header-inner {
+  height: 100%;
+  width: 1253px;
+  display: flex;
+  justify-content: center;
 }
 
 .header-icon {
