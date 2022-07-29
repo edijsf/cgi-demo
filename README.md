@@ -7,6 +7,7 @@
   Parent category should be able to list product from nested categories
     eg. if parent category has 1 product and subcategory have 1 product, parent category should be able to get both products
   Be aware products can be assigned to multiple categories
-  If category and subcategories have same product backend should return only 1 product 
-3. Use of repository pattern is a bonus
+  If category and subcategories have same product backend should return only 1 product  
+3. Be able to retrieve promoted categories
+4. Use of repository pattern is a bonus
 4. Use of CQRS pattern is bonus
