@@ -130,14 +130,17 @@ public static class DbInitializer
                 "Hose reels and holders"
             });
 
-        foreach(var c in context.Categories)
+        var p = context.Products.Add(new Product() { Id = ++ProductCounter, Name = "Reused product" }).Entity;
+        context.SaveChanges();
+        foreach (var c in context.Categories)
         {
             for (var n = 0; n < 2; n++)
             {
                 AddCategoryProduct(context, c, $"P[{ProductCounter + 1}] {c.Name}");
             }
+            context.ProductCategories.Add(new ProductCategory() { CategoryId = c.Id, ProductId = p.Id });
+            context.SaveChanges();
         }
-
     }
     private static void AddCategoryProduct(DataContext ctx, Category c, string product)
     {
