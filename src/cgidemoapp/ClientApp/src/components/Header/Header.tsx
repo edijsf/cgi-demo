@@ -31,15 +31,7 @@ const Header = (props: Props) => {
         >
           Trending
         </a>
-        <a
-          href={`${window.location.href}404`}
-          style={{
-            marginLeft: "24px",
-            paddingTop: "12px",
-          }}
-        >
-          Stores
-        </a>
+        <Link>Stores</Link>
         <div
           style={{
             marginLeft: "auto",
@@ -81,3 +73,20 @@ const Header = (props: Props) => {
 };
 
 export default Header;
+
+interface Props {
+  children?: React.ReactNode;
+}
+const Link = ({ children }: Props) => {
+  return (
+    <a
+      href={`${window.location.href}404`}
+      style={{
+        marginLeft: "24px",
+        paddingTop: "12px",
+      }}
+    >
+      Stores
+    </a>
+  );
+};

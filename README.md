@@ -19,8 +19,12 @@ design: https://www.figma.com/file/7PT8s0RCyt99TgL5JEqmE8/CGI-Demo?node-id=0%3A1
 
 1. Center text in pages/404.tsx
 2. Refactor Header component so its readable, consistent & works correctly (logo should go to root, links should go to 404)
-3. Create components from design
-4. Bonus:
-   1.1 Side navigation opens and closes from user click
-   1.2 Clicking Add to cart button increases the cart counter in Header.tsx
-   1.3 One of the developers will love your code if you use tailwind.css
+3. Recreate design from Figma
+4. Access and display products from backend
+5. Access and display promoted categories from backend
+6. Access and display hierarchial categories data from backend
+7. Bonus:
+   1.1 Categories side navigation opens and closes from user click
+   1.2 Show promoted products ribbon
+   1.3 Clicking Add to cart button should increase the cart items counter in Header.tsx
+   1.4 One of the developers will love your code if you use tailwind.css
